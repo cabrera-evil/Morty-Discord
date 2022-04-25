@@ -27,9 +27,6 @@ client.on('ready', () =>{
 //Get message
 client.on('message', message => {
     console.log(message.content)
-    if(message.content === 'ping'){
-        message.reply('pong');
-    }
 
     if(message.content === '!hi'){
         message.channel.send(`Hello ${message.author}!`);
@@ -39,8 +36,8 @@ client.on('message', message => {
         message.channel.send('Glad you are testing');
     }
 
-    if(message.content === '!Git'){
-        message.channel.send('https://github.com/cabrera-evil/Morty-Discord');
+    if(message.content === '!git'){
+        message.channel.send('https://github.com/cabrera-evil/Morty-Discord-Server');
     }
 
 });

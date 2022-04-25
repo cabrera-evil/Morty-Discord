@@ -8,7 +8,7 @@ const Monitor = require('ping-monitor');
  
 keepAlive();
 const monitor = new Monitor({
-    website: 'https://morty-discord.cabreraevil.repl.run',
+    website: 'https://Morty-Discord.cabreraevil.repl.co',
     title: 'Main',
     interval: 30 // minutes
 });

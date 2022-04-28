@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES"] })
-const TOKEN = process.env['TOKEN']
+const config = require("./config.json");
+const TOKEN = config.BOT_TOKEN;
 
 client.on('ready', () =>{
     console.log(`Bot ready as: ${client.user.tag}`);

@@ -11,16 +11,24 @@ client.on('ready', () =>{
 
 //Get message
 client.on('message', message => {
-    console.log(message.content)
+    console.log("User:", message.author.username," Message:", message.content)
+    command(message);
 
-    if(message.content === '!morty'){
-        message.channel.send(`Hello ${message.author}!`);
+    function command(message){
+        switch (message.content){
+            case '!help':
+                message.channel.send('Commands');
+                break;
+            case '!morty':
+                message.channel.send(`Hello ${message.author}!`);
+                break;
+            case '!git':
+                message.channel.send('https://github.com/cabrera-evil/Morty-Discord');
+                break;
+            default:
+                break;
+        }
     }
-
-    if(message.content === '!git'){
-        message.channel.send('https://github.com/cabrera-evil/Morty-Discord');
-    }
-
 });
 
 client.login(TOKEN);

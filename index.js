@@ -33,10 +33,6 @@ client.on("message", async message => {
     } else if (message.content.startsWith(`${prefix}stop`)) {
         stop(message, serverQueue);
         return;
-    }
-    if (message.content.startsWith(`${prefix}con razon`)) {
-        execute(message, serverQueue);
-        return;
     } else {
         message.channel.send("You need to enter a valid command!");
     }
